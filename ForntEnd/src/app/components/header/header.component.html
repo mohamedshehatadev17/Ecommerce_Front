@@ -1,0 +1,66 @@
+<div style="height: 98px"></div>
+
+<!-- navbar start -->
+<div class="container-fuild">
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-light" style="background-color: gainsboro !important">
+    <div class="container">
+      <a class="navbar-brand" routerLink=""><img src="../../../assets/logo.png" width="120px" alt="Logo" /></a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink=""><i class="fas fa-home"></i> Home</a>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link" routerLink="" style="font-size: 16px"><i class="fas fa-shopping-bag"></i> Shop</a>
+          </li> -->
+
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/cart" style="font-size: 16px"><i class="fas fa-shopping-cart"></i> Cart</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/wishList" style="font-size: 16px"><i class="fas fa-heart"></i> wishList</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/aboutUs" style="font-size: 16px"><i class="fas fa-info-circle"></i> About
+              Us</a>
+          </li>
+        </ul>
+
+        <ul class="navbar-nav">
+          <li class="nav-item" *ngIf="!isLoggedIn">
+            <a class="nav-link active" href="login" style="font-size: 16px">Login</a>
+          </li>
+          <li class="nav-item" *ngIf="!isLoggedIn">
+            <a class="nav-link" href="register" style="font-size: 16px">Register</a>
+          </li>
+          <li class="nav-item" *ngIf="!isLoggedIn">
+            <a class="nav-link" href="#" style="font-size: 16px"><i class="fas fa-lock"></i></a>
+          </li>
+
+          <!-- Logged In -->
+          <li class="nav-item" *ngIf="isLoggedIn && customer">
+            <a class="nav-link ">{{ customer.firstName }} {{ customer.lastName }}</a>
+          </li>
+          <li class="nav-item" *ngIf="isLoggedIn">
+            <a class="nav-link " routerLink="orderDetails">My Orders</a>
+          </li>
+          <li class="nav-item" *ngIf="isLoggedIn">
+            <a class="nav-link" routerLink="profileInfo">Profile</a>
+          </li>
+          <li class="nav-item" *ngIf="isLoggedIn">
+            <a class="nav-link" (click)="logOut()" routerLink="/home">Log Out</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
+<!-- navbar end -->

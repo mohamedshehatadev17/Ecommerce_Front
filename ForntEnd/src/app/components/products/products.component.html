@@ -1,0 +1,195 @@
+<!-- <section id="collection" class="py-5">
+  <div class="container-fluid">
+    <div class="row justify-content-center">
+      <div class="col-md-3">
+        <button class="btn m-3 custom-button" (click)="GetAll()">All Products</button>
+      </div>
+      <div class="col-md-8">
+        <ul class="nav nav-tabs d-flex justify-content-center border-0 collection-tabs">
+          <li class="nav-item" *ngFor="let category of subCategories">
+            <button class="btn m-3 custom-button" value="{{category.id}}" (click)="getProductsbyCategory(category.id)">
+              {{ category.name }}
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+ 
+
+      <div id="page-content-wrapper">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-md-3 col-sm-6" *ngFor="let product of productsofSub">
+              <div class="card product-card" style="width: 280px;">
+                <a routerLink="/products/Details/{{ product.id }}">
+                  <img [src]="product.productImages[0].imageURL" class="card-img-top" alt="Product Image" style="object-fit: cover; width: 280px; height: 330px;">
+                </a>
+                <div class="card-body d-flex flex-column justify-content-between">
+                  <div>
+                    <ul class="list-unstyled d-flex justify-content-between mb-2">
+                      <li>
+                        <i class="text-warning fa fa-star"></i>
+                        <i class="text-warning fa fa-star"></i>
+                        <i class="text-warning fa fa-star"></i>
+                        <i class="text-muted fa fa-star"></i>
+                        <i class="text-muted fa fa-star"></i>
+                      </li>
+                      <li class="text-muted" style="font-size: 18px;">{{ product.price * (1 - product.discount) | number:'1.0-2' }} EGP</li>
+                    </ul>
+                    <a class="h6 text-decoration-none text-dark" style="height: 60px; overflow: hidden;">{{ product.name }}</a>
+                  </div>
+                  <div>
+                    <p class="card-text small text-muted" style="height: 80px; overflow: hidden;">{{ product.description }}</p>
+                    <p class="card-text text-muted">Reviews (20)</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+</section> -->
+
+<div class="container-fluid">
+  <div class="row " style="position: relative;">
+    <div class="sidebar col-3" style="position: sticky; top: 95px;">
+      <form>
+        <!--Abdo-->
+        <label for="dropdown-1" class="dropdown-btn mb-1">Product Type</label>
+        <input type="checkbox" id="dropdown-1" class="dropdown-checkbox" />
+        <div class="dropdown-container">
+          <div *ngFor="let category of originSubCateories" class="ms-3">
+            <input class="removecheckbox" type="checkbox" (click)="fiterdataBySubCategory($event)"
+              [value]="category.id" />
+            <label [for]="category.name"> {{ category.name }}</label><br />
+          </div>
+        </div>
+
+        <label for="dropdown-2" class="dropdown-btn mb-1">Color</label>
+        <input type="checkbox" id="dropdown-2" class="dropdown-checkbox" />
+        <div class="dropdown-container">
+          <div *ngFor="let col of Colors" class="ms-3">
+            <input class="removecheckbox" type="checkbox" (click)="fiterdataByColor($event)" [value]="col" />
+            <label class="ms-1" [for]="col"> {{ col }}</label><br />
+          </div>
+        </div>
+
+        <label for="dropdown-3" class="dropdown-btn mb-2 mb-1 ">Size</label>
+        <input type="checkbox" id="dropdown-3" class="dropdown-checkbox" />
+        <div class="dropdown-container">
+          <div *ngFor="let si of Sizes" class="ms-3">
+            <input class="removecheckbox" type="checkbox" (click)="fiterdataBySize($event)" [value]="si" />
+            <label class="ms-1" [for]="si"> {{ si }}</label><br />
+          </div>
+        </div>
+
+        <!-- <label for="dropdown-2" class="dropdown-btn">Product Type</label>
+        <input type="checkbox" id="dropdown-2" class="dropdown-checkbox">
+        <div class="dropdown-container">
+          <a href="#">T-shirt</a>
+          <a href="#">Pants</a>
+        </div> -->
+
+        <!--<label for="dropdown-3" class="dropdown-btn">Color</label>
+        <input type="checkbox" id="dropdown-3" class="dropdown-checkbox">
+        <div class="dropdown-container">
+          <a (click)="color(col)" *ngFor="let col of Colors">{{col}}</a>
+
+        </div>-->
+        <!--
+        <label for="dropdown-4" class="dropdown-btn">Size</label>
+        <input type="checkbox" id="dropdown-4" class="dropdown-checkbox">
+        <div class="dropdown-container">
+          <a (click)="size(si)" *ngFor="let si of Sizes">{{si}}</a>
+
+        </div>
+      -->
+        <button type="submit" (click)="FilterCombo()" class=" btn btn-info bg-info w-100 pt-2" style="
+            
+            padding: 8px 16px;
+            font-size: 16px;
+            border: none;
+            background-color: #f1f1f1;
+            color: #333;
+            cursor: pointer;
+            outline: none;
+          " onmouseover="this.style.backgroundColor='#ccc'; this.style.color='#fff';"
+          onmouseout="this.style.backgroundColor='#f1f1f1'; this.style.color='#333';">
+          Filter
+        </button>
+        <button (click)="clear($event)" class=" btn btn-info bg-secondary w-100 mt-2" style="
+            padding: 8px 16px;
+            font-size: 16px;
+            border: none;
+            background-color: #f1f1f1;
+            color: #333;
+            cursor: pointer;
+            outline: none;
+          " onmouseover="this.style.backgroundColor='#ccc'; this.style.color='#fff';"
+          onmouseout="this.style.backgroundColor='#f1f1f1'; this.style.color='#333';">
+          Clear
+        </button>
+      </form>
+    </div>
+
+    <div class="col-8 offset-sm-1  text-center">
+      <section id="collection" class="py-2 px-4 d-flex justify-content-center">
+        <div class="container-fluid"></div>
+      </section>
+      <div>
+        <div id="page-content-wrapper">
+          <div class="row container-fluid justify-content-start m-0 p-0">
+            <div class="col-sm-12 col-md-3 col-lg-4 my-4" *ngFor="let product of productsofSub">
+              <div class="card product-card">
+                <a routerLink="/products/Details/{{ product.id }}">
+                  <img [src]="product.productImages[0].imageURL" class="card-img-top" alt="Product Image"
+                    style="object-fit: cover" />
+                </a>
+                <div class="card-body d-flex flex-column justify-content-around m-0 p-2">
+                  <ul class="list-unstyled d-flex justify-content-center m-0 p-0">
+                    <div class="row d-flex justify-content-center text-center m-0 p-0">
+                      <div class="col-6">
+                        <li class="text-muted d-flex justify-content-center m-0 p-0" style="font-size: 20px">
+                          <p>LE</p>
+                          <span style="margin-left: 5px">
+                            {{
+                            product.price * (1 - product.discount)
+                            | number : "1.0-2"
+                            }}
+                          </span>
+                        </li>
+                      </div>
+                      <div class="col-6">
+                        <li class="text-muted" style="font-size: 17px">
+                          <del style="color: red">LE {{ product.price | number : "1.0-2" }} </del>
+                        </li>
+                      </div>
+                    </div>
+                  </ul>
+
+                  <p>
+                    <rating [(ngModel)]="product.rate" [max]="5" [readonly]="true"
+                      [titles]="['one', 'two', 'three', 'four', 'five']" fullIcon="fa fa-star" emptyIcon="fa fa-star-o"
+                      halfIcon="fa fa-star-half" class="text-warning fs-3 me-2 ">
+                    </rating>
+                  </p>
+
+                  <a class="h6 text-decoration-none text-dark ">{{
+                    product.name
+                    }}</a>
+                  <p class="card-text small text-muted">
+                    {{ product.description }}
+                  </p>
+                  <div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

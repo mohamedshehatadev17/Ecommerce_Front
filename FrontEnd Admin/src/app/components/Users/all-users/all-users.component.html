@@ -1,0 +1,163 @@
+<!-- <div class="container-fluid">
+    <div class="my-3 text-end d-flex justify-content-around">
+        
+        <div class="input-group my-3 w-50">
+            <span class="input-group-text btn btn-primary"><i class="bi bi-search"></i></span>
+            <input type="text" class="form-control" [(ngModel)]="searchInput" placeholder="Product Name">
+        </div>
+       <button class="btn btn-outline-primary my-3" data-bs-toggle="modal" data-bs-target="#ProductInfoModal">Add Product</button>
+    </div>
+
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title text-center"> All Products</h4>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead class=" text-primary">
+                            <th>
+                                Name
+                            </th>
+                            <th>
+                                Description
+                            </th>
+                            <th>
+                                Price
+                            </th>
+                            <th class="text-right">
+                                Discount
+                            </th>
+                            <th>
+                                After Discount
+                            </th>
+                            <th>
+                                Rate
+                            </th>
+                            <th class="text-center">
+                                Actions
+                            </th>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let product of filteredProducts">
+                                <td>
+                                    {{product.name}}
+                                </td>
+                                <td>
+                                    {{product.description}}
+                                </td>
+                                <td>
+                                    {{product.price}} $
+                                </td>
+                                <td>
+                                    {{product.discount*100}} %
+                                </td>
+                                <td>
+                                    {{(product.price *(1-product.discount)).toFixed(2)}} $
+                                </td>
+                                <td>
+                                    {{product.rate}}
+                                </td>
+                                <td class="text-center">
+                                    <i class="bi bi-pencil-square btn border-0 fs-5 text-primary" data-bs-toggle="modal" data-bs-target="#ProductInfoModal"></i>
+                                    <i class="bi bi-x-circle btn border-0 fs-5 text-danger" data-bs-toggle="modal" data-bs-target="#deleteModal"></i>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            *ngIf="UserToDelete" 
+            <div class="modal-content" >
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Delete Confirmation</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Delete Product 
+                     {{UserToDelete.name}} ? -->
+                <!-- </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                     (click)="DeleteUser()" -->
+                    <!-- <button type="button" class="btn btn-primary" 
+                        data-bs-dismiss="modal">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div> 
+
+    <div class="modal fade" id="ProductInfoModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content"> -->
+            <!-- (click)="clearInputs()" -->
+            <!-- <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Product Information</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                    ></button>
+            </div>
+
+            <div class="modal-body">
+
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="floatingInputName" placeholder=" " #newName
+                        >  -->
+                        <!-- [(ngModel)]="Username" -->
+                    <!-- <label for="floatingInputName">Name</label>
+                </div>
+                <div class="form-floating mb-3"> -->
+                    <!-- <input type="email" class="form-control" id="floatingInputEmail" placeholder="name@example.com"
+                        #newEmail required >
+                        [(ngModel)]="Useremail"
+                    <label for="floatingInputEmail">Email address</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="tel" class="form-control" id="floatingInputPhone" placeholder="ex: 01xxxxxxxxx"
+                        #newPhone >
+                         [(ngModel)]="Userphone"
+                    <label for="floatingInputPhone">Phone</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <span class="input-group-text mb-2">Address</span>
+                    <div class="row g-3">
+                        <div class="col-sm">
+                            <input type="text" class="form-control" placeholder="Street" aria-label="Street" #newStreet
+                                >
+                                 [(ngModel)]="Userstreet" -->
+                        <!-- </div>
+                        <div class="col-sm">
+                            <input type="text" class="form-control" placeholder="Suite" aria-label="Suite" #newSuite
+                                >
+                                 [(ngModel)]="Usersuite" -->
+                        <!-- </div>
+                        <div class="col-sm">
+                            <input type="text" class="form-control" placeholder="City" aria-label="City" #newCity
+                                >  
+                                [(ngModel)]="Usercity" -->
+                        <!-- </div>
+                    </div>
+                </div>
+
+            </div> -->
+            <!-- (click)="clearInputs()"
+            (click)="Validate(newName.value,newEmail.value,newPhone.value,newStreet.value,newSuite.value,newCity.value)" -->
+            <!-- <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                 #closeBtn >Close</button>
+                <button type="button" class="btn btn-primary">Save</button>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+</div>  -->

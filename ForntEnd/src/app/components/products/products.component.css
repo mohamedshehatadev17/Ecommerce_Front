@@ -1,0 +1,272 @@
+body {
+  overflow: hidden;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 9px 12px;
+  gap: 8px;
+  height: 40px;
+  width: 201px;
+  border: none;
+  background: gray;
+  cursor: pointer;
+}
+
+.lable {
+  line-height: 22px;
+  font-size: 17px;
+  color: #fff;
+  font-family: sans-serif;
+  letter-spacing: 1px;
+}
+
+.button:hover {
+  background: #e52e26;
+}
+
+.button:hover .svg-icon {
+  animation: slope 1s linear infinite;
+}
+
+@keyframes slope {
+  0% {
+  }
+
+  50% {
+    transform: rotate(10deg);
+  }
+
+  100% {
+  }
+}
+
+.Details:hover {
+  background: #e52e26;
+}
+
+.custom-button {
+  font-size: 18px;
+  font-weight: 500;
+  color: black;
+  background-color: #e8e8e8;
+  border: none;
+  outline: none;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.custom-button:hover {
+  background-color: black;
+  color: white;
+}
+@keyframes buttonAnimation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.custom-button {
+  animation-duration: 0.3s;
+  animation-name: none;
+}
+
+.custom-button {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.custom-button::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.3s, height 0.3s;
+  pointer-events: none;
+}
+
+.custom-button:hover {
+  transform: scale(1.05);
+}
+
+.custom-button:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+.product-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+}
+
+.product-card .card-img-top {
+  border-radius: 8px 8px 0 0;
+}
+
+.product-card .card-body {
+  padding: 1.5rem;
+}
+
+.product-card .list-unstyled li {
+  font-size: 20px;
+}
+
+.product-card .h2 {
+  font-size: 24px;
+  margin-bottom: 0.5rem;
+}
+
+.product-card .card-text {
+  font-size: 16px;
+  color: #666;
+}
+
+.product-card .text-muted {
+  font-size: 14px;
+}
+.custom-section {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+html,
+body {
+  overflow-x: hidden;
+}
+
+#layoutSidenav {
+  background-color: #f8f9fa;
+  position: relative;
+  overflow-x: hidden;
+  width: 225px;
+  transition: all 0.3s;
+}
+
+#layoutSidenav_nav {
+  height: 100%;
+  padding-top: 3.5rem;
+}
+
+.sb-sidenav {
+  width: 100%;
+}
+
+.sb-sidenav-menu {
+  margin-top: 20px;
+}
+
+.sb-sidenav-menu-heading {
+  font-size: 0.75rem;
+  padding: 10px 16px;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.6);
+  letter-spacing: 0.03rem;
+  font-weight: 600;
+}
+
+.sb-sidenav-menu .nav-link {
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 10px 16px;
+  transition: color 0.1s;
+}
+
+.sb-sidenav-menu .nav-link:hover {
+  color: rgba(0, 0, 0, 1);
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.sb-sidenav-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  background-color: #f8f9fa;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 0.75rem;
+  letter-spacing: 0.03rem;
+}
+
+.sidebar {
+  width: 250px;
+  height: 100%;
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+}
+
+.custom-width {
+  width: 33%;
+}
+
+.dropdown-btn {
+  display: block;
+  width: 100%;
+  padding: 8px 16px;
+  margin-bottom: 20px; /* Added margin-bottom for spacing between buttons */
+  font-size: 16px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  text-align: left;
+}
+
+.dropdown-container {
+  display: block;
+  padding-left: 15px;
+}
+
+.dropdown-checkbox {
+  display: none;
+}
+
+.dropdown-checkbox:checked + .dropdown-container {
+  display: block;
+}
+
+.dropdown-container a {
+  display: block;
+  padding: 8px 16px;
+  text-decoration: none;
+  color: #fff;
+  transition: background-color 0.3s;
+}
+
+.dropdown-container a:hover {
+  background-color: #555;
+}
+
+/* Responsive styles */
+@media (max-width: 767px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+  }
+}
+
+
+

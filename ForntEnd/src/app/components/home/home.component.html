@@ -1,0 +1,348 @@
+<!--start Slider-->
+<div id="C1" class="carousel carousel-dark slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active" data-bs-interval="10000">
+      <a routerLink="/category/{{categories[0].id}}"><img
+          src="https://onpointfresh.com/wp-content/uploads/2017/04/Mens-Summer-Fashion..png" style="height: 500px;"
+          class="d-block w-100" alt="..."></a>
+      <div class="carousel-caption d-none d-md-block">
+        <h2>{{categories[0].name}} Category</h2>
+
+      </div>
+    </div>
+    <div class="carousel-item" data-bs-interval="2000">
+      <a routerLink="/category/{{categories[2].id}}"><img src="../../../assets/14.jpeg" style="height: 500px;"
+          class="d-block w-100" alt="..."></a>
+      <div class="carousel-caption d-none d-md-block">
+        <h2>{{categories[2].name}} Category</h2>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <a routerLink="/category/{{categories[1].id}}"><img src="../../../assets/123.jpg" style="height: 500px;"
+          class="d-block w-100" alt="..."></a>
+      <div class="carousel-caption d-none d-md-block">
+        <h2>{{categories[1].name}} Category</h2>
+      </div>
+    </div>
+
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#C1" data-bs-slide-to="0" class="active" aria-current="true"
+        aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#C1" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#C1" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#C1" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#C1" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+</div>
+<!--start Slider-->
+
+
+
+
+<!--try1-->
+<!-- <section class="container py-5">
+<div class="row text-center pt-3">
+    <div class="col-lg-6 m-auto">
+        <h1 class="h1">Categories of The Month</h1>
+        <p>
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+            deserunt mollit anim id est laborum.
+        </p>
+    </div>
+</div> -->
+<br>
+<section class="container py-5">
+  <div class="row text-center pt-3">
+    <div class="col-lg-10 offset-lg-1">
+      <h1 class="h1">Explore Fashion Categories</h1>
+      <p class="text-center" style="font-size: 17px; color: #666;">
+        Discover the latest trends in clothing and accessories. From stylish dresses to trendy tops, find your perfect
+        fashion statement. Step up your style game with our curated collection of fashionable items.
+      </p>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div *ngFor="let c of categories" class="col-12 col-md-4 p-5 mt-3" >
+      <!-- <a href="#"><img src="../../../assets/category_img_01.jpg" class="rounded-circle img-fluid border"></a> -->
+      <div>
+        <a><img src="../../../assets/kids.jpg" class="rounded-circle img-fluid border" style="height: 400px; width: 400px;"></a>
+      </div>
+
+      <h2 class="h5 text-center mt-3 mb-3">{{c.name}}</h2>
+      <p class="text-center"><a class="btn btn-dark" routerLink="/category/{{c.id}}">Go Shop</a></p>
+    </div>
+  </div>
+
+
+
+  <!-- End Categories of The Month -->
+
+
+
+
+  <!--Try-->
+
+  <div class="container marketing">
+
+
+
+    <hr class="featurette-divider">
+    <br><br>
+    <div class="row featurette">
+
+      <!-- <div class="col-md-7 order-md-2">   
+      <h2 class="featurette-heading fw-normal lh-1">Oh yeah, it’s that good. <span class="text-body-secondary">See for yourself.</span></h2>
+      <p class="lead">Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.</p>
+    </div> -->
+      <div class="col-md-12 order-md-2 ">
+        <div class="row">
+          <div class="col-md-6 order-md-last">
+            <h2 class="featurette-heading fw-normal lh-1" style="font-size: 28px; color: #333;">Discover the Latest
+              Styles
+            </h2>
+            <p class="lead" style="font-size: 17px; color: #666;">Step up your fashion game with our curated collection
+              of
+              trendy clothing and accessories for men. Whether you're looking for casual attire or formal wear, we have
+              the
+              perfect options to elevate your style. Explore our extensive range of high-quality products and create
+              your
+              signature look.</p>
+          </div>
+          <div class="col-md-6 order-md-1 ">
+            <img src="../../../assets/min-2.jpg" class="img-fluid" alt="Man"
+              style="border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
+          </div>
+        </div>
+      </div>
+
+
+
+    </div>
+    <Br><br>
+    <hr class="featurette-divider">
+    <Br><br>
+
+    <!-- <div class="row featurette">
+    <div class="col-md-7">
+      <h2 class="featurette-heading fw-normal lh-1">And lastly, this one. <span class="text-body-secondary">Checkmate.</span></h2>
+      <p class="lead">And yes, this is the last block of representative placeholder content. Again, not really intended to be actually read, simply here to give you a better view of what this would look like with some actual content. Your content.</p>
+    </div>
+    <div class="col-md-5">
+      <img  width="500" height="600" src="../../../assets/3.jpeg" >
+    </div>
+    
+  </div> -->
+    <div class="container">
+      <div class="row featurette">
+        <div class="col-md-6">
+          <h2 class="featurette-heading fw-normal lh-1" style="font-size: 28px; color: #333;">Elevate Your Style</h2>
+          <p class="lead" style="font-size: 17px; color: #666;">Experience the power of fashion with our exclusive
+            collection of trendy clothing and accessories for women. From chic dresses to elegant tops, discover the
+            perfect ensemble to express your unique personality. Embrace your individuality and make a statement
+            wherever
+            you go. Unleash your confidence and let your style shine.</p>
+        </div>
+        <div class="col-md-5 offset-md-1">
+          <img src="../../../assets/women.jpg" class="img-fluid" alt="Woman"
+            style="border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
+        </div>
+      </div>
+    </div>
+
+    <br><br>
+    <!-- <hr class="featurette-divider">
+    <br><br> -->
+    <!-- /END THE FEATURETTES -->
+
+  </div>
+
+
+
+  <!-- Start Featured Product -->
+  <!-- <section class="bg-light">
+  <div class="container py-5">
+      <div class="row text-center py-3">
+          <div class="col-lg-6 m-auto">
+              <h1 class="h1">Featured Product</h1>
+              <p>
+                  Reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                  Excepteur sint occaecat cupidatat non proident.
+              </p>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-12 col-md-4 mb-4">
+              <div class="card h-100">
+                  <a href="shop-single.html">
+                      <img src="./assets/img/feature_prod_01.jpg" class="card-img-top" alt="...">
+                  </a>
+                  <div class="card-body">
+                      <ul class="list-unstyled d-flex justify-content-between">
+                          <li>
+                              <i class="text-warning fa fa-star"></i>
+                              <i class="text-warning fa fa-star"></i>
+                              <i class="text-warning fa fa-star"></i>
+                              <i class="text-muted fa fa-star"></i>
+                              <i class="text-muted fa fa-star"></i>
+                          </li>
+                          <li class="text-muted text-right">$240.00</li>
+                      </ul>
+                      <a href="shop-single.html" class="h2 text-decoration-none text-dark">Gym Weight</a>
+                      <p class="card-text">
+                          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt in culpa qui officia deserunt.
+                      </p>
+                      <p class="text-muted">Reviews (24)</p>
+                  </div>
+              </div>
+          </div>
+            
+      </div>
+  </div>
+</section> -->
+  <!-- <section class=" bg-light custom-section">
+    <div class="container py-5">
+      <div class="row text-center py-3">
+        <div class="col-lg-6 m-auto">
+          <h1 class="h1">Featured Product</h1>
+          <p style="font-size: 17px; color: #666;">
+            Immerse Yourself in the Unparalleled World of Fashion Forwardness with Our Exquisite and Exclusive
+            Featured
+            Product
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 col-sm-6 col-md-3 mb-4">
+          <div class="card h-100 product-card">
+            <a href="shop-single.html">
+              <img src="https://th.bing.com/th/id/OIP.dz780KsZQej_aE7Uu_FN-QHaHa?pid=ImgDet&rs=1"
+                class="card-img-top object-fit:cover">
+            </a>
+            <div class="card-body">
+              <ul class="list-unstyled d-flex justify-content-between mb-2">
+                <li>
+                  <i class="text-warning fa fa-star"></i>
+                  <i class="text-warning fa fa-star"></i>
+                  <i class="text-warning fa fa-star"></i>
+                  <i class="text-warning fa fa-star"></i>
+                  <i class="text-muted fa fa-star"></i>
+                </li><br>
+                <li class="text-muted text-right " style="font-size: 18px;">210.00 EGP</li>
+              </ul><br>
+              <a href="shop-single.html" class="h6 text-decoration-none text-dark">Classic Cotton T-Shirt</a><br>
+              <p class="card-text" style="font-size: 14px;">
+                Elevate your casual wardrobe with our classic cotton T-shirt.
+                Made from premium quality fabric, this T-shirt offers a comfortable and breathable fit.
+                The timeless design and versatile color make it a perfect choice for any occasion.
+              </p>
+              <p class="text-muted">Reviews (24)</p>
+            </div>
+
+          </div>
+
+        </div>
+        <div class="col-12 col-sm-6 col-md-3 mb-4">
+          <div class="card h-100 product-card">
+            <a href="shop-single.html">
+              <img src="https://th.bing.com/th/id/OIP.liXWbOZtrpocsJUvoCXXLAHaLH?pid=ImgDet&rs=1" style="height: 300px;"
+                class="card-img-top">
+            </a>
+            <div class="card-body">
+              <ul class="list-unstyled d-flex justify-content-between mb-2">
+                <li>
+                  <i class="text-warning fa fa-star"></i>
+                  <i class="text-warning fa fa-star"></i>
+                  <i class="text-warning fa fa-star"></i>
+                  <i class="text-muted fa fa-star"></i>
+                  <i class="text-muted fa fa-star"></i>
+                </li><br>
+                <li class="text-muted text-right " style="font-size: 18px;">240.00EGP</li>
+              </ul><br>
+              <a href="shop-single.html" class="h6 text-decoration-none text-dark"> Brown Casual Pants</a><br>
+              <p class="card-text" style="font-size: 14px;">
+                our brown pants offer a perfect blend of comfort and sophistication. Made from high-quality materials,
+                they provide a luxurious feel and ensure durability. Whether you're dressing up for a formal occasion
+                or
+                going for a casual outing
+              </p>
+              <p class="text-muted">Reviews (10)</p>
+            </div>
+
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-3 mb-4">
+          <div class="card h-100 product-card">
+            <a href="shop-single.html">
+              <img
+                src="https://th.bing.com/th/id/OIP.YZLjyK-VjCv6zwCtXkCu2AHaJ4?w=182&h=243&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+                class="card-img-top">
+            </a>
+            <div class="card-body">
+              <ul class="list-unstyled d-flex justify-content-between mb-2">
+                <li>
+                  <i class="text-warning fa fa-star"></i>
+                  <i class="text-warning fa fa-star"></i>
+                  <i class="text-warning fa fa-star"></i>
+                  <i class="text-muted fa fa-star"></i>
+                  <i class="text-muted fa fa-star"></i>
+                </li><br>
+                <li class="text-muted text-right " style="font-size: 18px;">100.00EGP</li>
+              </ul><br>
+              <a href="shop-single.html" class="h6 text-decoration-none text-dark">Light Grey Bomber Jacket/</a><br>
+              <p class="card-text" style="font-size: 14px;">
+                bomber jackets are the epitome of modern fashion. Crafted with meticulous attention to detail,
+                these jackets feature a sleek and streamlined silhouette that effortlessly complements any outfit.
+                Made from high-quality materials
+
+
+              </p>
+              <p class="text-muted">Reviews (20)</p>
+            </div>
+
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-3 mb-4">
+          <div class="card h-100 product-card">
+            <a href="shop-single.html">
+              <img src="https://i.pinimg.com/736x/14/a1/0b/14a10bb612cc9588d0e6e85708d535e6.jpg" class="card-img-top">
+            </a>
+            <div class="card-body">
+              <ul class="list-unstyled d-flex justify-content-between mb-2">
+                <li>
+                  <i class="text-warning fa fa-star"></i>
+                  <i class="text-warning fa fa-star"></i>
+                  <i class="text-warning fa fa-star"></i>
+                  <i class="text-warning fa fa-star"></i>
+                  <i class="text-muted fa fa-star"></i>
+                </li><br>
+                <li class="text-muted text-right " style="font-size: 18px;">400.00EGP</li>
+              </ul><br>
+              <a href="shop-single.html" class="h6 text-decoration-none text-dark"> Woman's Jacket</a><br>
+              <p class="card-text" style="font-size: 14px;">
+                our exquisite collection of women's jackets. Designed to enhance your style and keep you warm in
+                utmost
+                elegance,
+                our jackets are a must-have addition to your wardrobe. Crafted with meticulous attention to detail,
+                these jackets offer a perfect balance of functionality
+
+
+              </p>
+              <p class="text-muted">Reviews (18)</p>
+            </div>
+
+          </div>
+        </div>
+         Add more product cards here
+      </div>
+    </div>
+  </section> -->
